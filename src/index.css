@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sentinel-bg text-sentinel-text font-sans antialiased overflow-hidden;
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-sentinel-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-sentinel-panel rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sentinel-dim;
+}
