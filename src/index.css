@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-sentinel-bg: #0a0a0f;
+  --color-sentinel-panel: #13131f;
+  --color-sentinel-accent: #7c3aed;
+  --color-sentinel-success: #10b981;
+  --color-sentinel-warning: #f59e0b;
+  --color-sentinel-error: #ef4444;
+  --color-sentinel-text: #e2e8f0;
+  --color-sentinel-dim: #94a3b8;
+  
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: Inter, system-ui, sans-serif;
+}
 
 @layer base {
   body {
@@ -13,11 +25,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-sentinel-bg;
+  background-color: var(--color-sentinel-bg);
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-sentinel-panel rounded-full;
+  background-color: var(--color-sentinel-panel);
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-sentinel-dim;
+  background-color: var(--color-sentinel-dim);
 }
